@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+</head>
+<body>
+    <div id="wrap">
+        <header>
+            <nav>
+                <div class="logo">
+                  <img src="img/main_logo.png" alt="logo">
+                </div>
+                <div class="button">
+                  <button>상담 신청하기</button>
+                </div>
+            </nav>
+        </header>
+        <section>
+           <div class="container">
+                <div class="cont01">
+                    <div class="text">
+                        <p>5분으로 가능한 법인 설립 - 이런등기!</p>
+                        <span></span>
+                        <p>서류없이! 방문없이! 누구나 쉬운 법인 설립!</p>
+                    </div>
+                    <img src="img/mainImg.png" alt="mainImg">
+                    <div class="cardImg">
+                        <img src="img/card01.png" alt="card">
+                        <img src="img/card02.png" alt="card">
+                        <img src="img/card03.png" alt="card">
+                    </div>
+                </div>
+
+                <div class="cont02">
+                    <div class="text">
+                        <p>혼자서도 쉽고 빠르고 안전하게!</p>
+                        <span></span>
+                        <p>맞춤형 정관제작, 고급 인감도장, 법인 서류 바인더를 드립니다.</p>
+                    </div>
+                    <div class="cardImg">
+                        <div>
+                            <img src="img/card04.png" alt="card">
+                            <p>국내 최저가 178,000원~ 68% 저렴한 국내 최저가 법인 설립</p>
+                        </div>
+                        <div>
+                            <img src="img/card05.png" alt="card">
+                            <p>변호사 자문 1회 <br> 무료 서비스</p>
+                        </div>
+                        <div>
+                            <img src="img/card06.png" alt="card">
+                            <p>5분 투자로 맞춤형 <br>정관 제작 무료</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cont03" id="submit">
+                    <div class="text">
+                        <p>상담신청을 남겨주시면 법인 설립을 도와드립니다.</p>
+                        <span></span>
+                        <p>아래 정보는 상담을 위한 목적으로만 활용됩니다.</p>
+                    </div>
+                    <img src="img/bottomImg.png" alt="bottomImg">
+                    <form>
+                        <fieldset>
+                            <ul>
+                              <li>
+                                <label for="user_name">이름</label>
+                                <input type="text" id="user_name" autofocus required>
+                              </li>
+                              <li>
+                                <label for="user_tel">전화번호</label>
+                                <input type="text" id="user_tel" placeholder="전화번호('-'제외)" maxlength="11">
+                              </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                  <label for="user_email">이메일</label>
+                                  <input type="text" id="user_email" placeholder="이메일">
+                                </li>
+                                <li>
+                                    <div class="radio user-check">
+                                        <span>성별</span>
+                                        <div>
+                                            <label><input type="radio" value="female" name="check"><span>여성</span></label>
+                                            <label><input type="radio" value="male" name="check"><span>남성</span></label>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li class="age">
+                                  <label for="user_age">나이</label>
+                                  <input type="text" id="user_age" placeholder="나이">
+                                </li>
+                                <li>
+                                    <label for="user_com">상호명</label>
+                                    <input type="text" id="user_com" placeholder="상호명">
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                  <label for="user_loc">지역</label>
+                                  <input type="text" id="user_loc" placeholder="지역">
+                                </li>
+                                <li class="money">
+                                    <label for="user_mon">자본금</label>
+                                    <input type="text" id="user_mon" placeholder="자본금">
+                                </li>
+                            </ul>
+                            <div class="bottom">
+                                <div>
+                                    <span class="xi-check"><span>개인정보의 수집 및 이용(필수)</span></span>
+                                    <span>(보기)</span>
+                                </div>
+                                <div>     
+                                    <span class="xi-check"><span>개인정보의 제 3자 제공(필수)</span></span>
+                                    <span>(보기)</span>
+                                </div>
+                                <div>
+                                    <span class="xi-check"><span>개인정보의 마케팅 활용(선택)</span></span>
+                                    <span>(보기)</span>
+                                </div>
+                                <button type="submit" name="submit">상담 신청하기</button></span>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+                <!-- 상담절차 -->
+                <div class="cont04">
+                    <p>상담 절차</p>
+                    <ul>
+                        <li><span>상담신청<br>하기</span></li>
+                        <li><img src="img/rightarr.png" alt="arr"></li>
+                        <li><span>접수완료</span></li>
+                        <li><img src="img/rightarr.png" alt="arr"></li>
+                        <li><span>상담전화</span></li>
+                    </ul>
+                </div>
+           </div>
+        </section>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script> 
+</body>
+</html>
