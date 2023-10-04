@@ -112,17 +112,15 @@ img{vertical-align:top;font-size:0;border:0;}
     #wrap .container .text p {font-size: 32px;line-height: 60px;}
     #wrap .container .text p:last-of-type {font-size: 26px;}
     #wrap .container .text span {bottom: 53px;height: 3px;}
-
     #wrap .container img {width: 80%;}
-   
     #wrap .container .cont02 {margin-top: 100px;}
     #wrap .container .cont02 .cardImg div {padding: 30px;}
     #wrap .container .cont02 .cardImg div p {font-size: 16px;height: 60px;}
-
     #wrap .container .cont03 form fieldset .bottom>button {font-size: 22px;}
     #wrap .container .cont04 p {font-size: 32px;}
     #wrap .container .cont04 ul li:nth-child(2n-1) span {font-size: 28px;}
 }
+
 
 /* Tablet */
 @media (min-width : 768px) and (max-width: 1023.99px) {
@@ -135,13 +133,10 @@ img{vertical-align:top;font-size:0;border:0;}
     #wrap .container .text p {font-size: 28px;line-height: 60px;}
     #wrap .container .text p:last-of-type {font-size: 26px;}
     #wrap .container .text span {bottom: 53px;height: 3px;}
-
     #wrap .container img {width: 80%;}
-   
     #wrap .container .cont02 {margin-top: 100px;}
     #wrap .container .cont02 .cardImg div {padding: 20px 0 20px 0;}
     #wrap .container .cont02 .cardImg div p {font-size: 16px;height: 60px;}
-
     #wrap .container .cont03 form fieldset .bottom>button {font-size: 22px;}
     #wrap .container .cont04 p {font-size: 28px;}
     #wrap .container .cont04 ul li:nth-child(2n-1) {width: 150px;height: 150px;}
@@ -174,38 +169,31 @@ img{vertical-align:top;font-size:0;border:0;}
     }
     #wrap .container img {width: 100%;}
 
-   
     #wrap .container .cont02 {margin-top: 80px;}
     #wrap .container .cont02 .cardImg div {padding: 20px;width: 100%;}
     #wrap .container .cont02 .cardImg div p {font-size: 16px;height: 70px;width: auto;}
  
-
     #wrap .container .cont03 {margin-top: 80px;}
     #wrap .container .cont03 form fieldset {padding: 0;}
     #wrap .container .cont03 form fieldset ul {flex-direction: column;row-gap: 10px;}
     #wrap .container .cont03 form fieldset .bottom>button {font-size: 18px;}
     #wrap .container .cont03>img {max-width: 400px;width: 100%;}
-
-    #wrap .container .cont04 p {font-size: 28px;}
-
-
-    #wrap .container .cont04 ul li:nth-child(2n-1) span {font-size: 16px;}
-
     #wrap .container .cont03 form fieldset {border: none;}
-    #wrap .container .cont03 form fieldset ul li {align-items: start;flex-direction: column;width: 100%;}
     #wrap .container .cont03 form fieldset ul {align-items: start;}
+    #wrap .container .cont03 form fieldset ul li {align-items: start;flex-direction: column;width: 100%;}
     #wrap .container .cont03 form fieldset ul li label {margin-bottom: 10px;}
     #wrap .container .cont03 form fieldset ul li input {width: 100%;box-sizing: border-box;}
     #wrap .container .cont03 form fieldset ul li.age::after,
     #wrap .container .cont03 form fieldset ul li.money::after {bottom: 5px;}
     #wrap .container .cont03 form fieldset ul:last-of-type {border: none;}
-
     #wrap .container .cont03 form fieldset .bottom span {font-size: 14px;}
     #wrap .container .cont03 form fieldset ul li .radio {width: 100%;}
     #wrap .container .cont03 form fieldset ul li .radio span {text-align: left;}
     #wrap .container .cont03 form fieldset ul li .radio div label {margin-bottom: 0;text-align: right;}
     #wrap .container .cont03 form fieldset ul li .radio div input {width: auto;}
 
+    #wrap .container .cont04 p {font-size: 28px;}
+    #wrap .container .cont04 ul li:nth-child(2n-1) span {font-size: 16px;}
 }   
 
 @media (min-width : 650px) and (max-width: 767.99px) {
