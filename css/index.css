@@ -15,6 +15,11 @@ input[type=reset]{cursor: pointer;}
 button,input{outline: none;}
 h1,h2,h3,h4,h5,h6{font-size:100%; font-weight: normal; margin-top: 0; }
 img{vertical-align:top;font-size:0;border:0;}
+/*---------- 아이콘폰트 CDN ----------*/
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css'); 
+
 
 
 
@@ -44,41 +49,43 @@ img{vertical-align:top;font-size:0;border:0;}
 /* section 03 */
 #wrap .container .cont03 {margin-top: 100px;}
 #wrap .container .cont03>img {width: 400px;}
-#wrap .container .cont03 form fieldset {margin: 80px auto 0;padding: 20px 40px;max-width: 1000px;border: 1px solid #333;}
-#wrap .container .cont03 form fieldset ul {display: flex;justify-content: space-between;align-items: center;margin-bottom: 10px;}
-#wrap .container .cont03 form fieldset ul:last-of-type {border-bottom: 1px solid #000; padding-bottom: 20px;margin-bottom: 0;}
-#wrap .container .cont03 form fieldset ul li {flex: 1;display: flex;justify-content: space-around;align-items: center;}
-#wrap .container .cont03 form fieldset ul li.age,
-#wrap .container .cont03 form fieldset ul li.money {position: relative;}
-#wrap .container .cont03 form fieldset ul li.money::after {
+#wrap .container .cont03 div .fieldset {margin: 80px auto 0;padding: 20px 40px;max-width: 1000px;border: 1px solid #333;}
+#wrap .container .cont03 div .fieldset ul {display: flex;justify-content: space-between;align-items: center;margin-bottom: 10px;}
+#wrap .container .cont03 div .fieldset ul:last-of-type {border-bottom: 1px solid #000; padding-bottom: 20px;margin-bottom: 0;}
+#wrap .container .cont03 div .fieldset ul li {flex: 1;display: flex;justify-content: space-around;align-items: center;}
+#wrap .container .cont03 div .fieldset ul li.age,
+#wrap .container .cont03 div .fieldset ul li.money {position: relative;}
+#wrap .container .cont03 div .fieldset ul li.money::after {
     content: '원';
     position: absolute;
     color: #333;
     font-size: 16px;
     right: 10px;
 }
-#wrap .container .cont03 form fieldset ul li.age::after {
+#wrap .container .cont03 div .fieldset ul li.age::after {
     content: '세';
     position: absolute;
     color: #333;
     font-size: 16px;
     right: 10px;
 }
-#wrap .container .cont03 form fieldset ul li label {flex: 0.5;}
-#wrap .container .cont03 form fieldset ul li input {padding: 5px 15px;flex: 1;}
-#wrap .container .cont03 form fieldset ul li input:focus::placeholder {opacity: 0;}
-#wrap .container .cont03 form fieldset ul li .radio {flex: 1;display: flex;justify-content: space-around;align-items: center;}
-#wrap .container .cont03 form fieldset ul li .radio span {flex: 0.5;}
-#wrap .container .cont03 form fieldset ul li .radio div {flex: 1;display: flex;}
-#wrap .container .cont03 form fieldset ul li .radio div label {cursor: pointer;text-align: left;}
-#wrap .container .cont03 form fieldset ul li .radio div label input {display: inline-block;margin-right: 5px;}
-#wrap .container .cont03 form fieldset .bottom {padding-top: 20px;}
-#wrap .container .cont03 form fieldset .bottom>div {display: flex;justify-content: space-between;align-items: center;margin-bottom: 10px;}
-#wrap .container .cont03 form fieldset .bottom>div img {width: 20px;height: 20px;margin-right: 20px;}
-#wrap .container .cont03 form fieldset .bottom>div span {cursor: pointer;}
-#wrap .container .cont03 form fieldset .bottom>div span.xi-check::before {margin-right: 10px;}
-#wrap .container .cont03 form fieldset .bottom>div span.xi-check.active:before {color: #F93755;}
-#wrap .container .cont03 form fieldset .bottom>button {
+#wrap .container .cont03 div .fieldset ul li label {flex: 0.5;}
+#wrap .container .cont03 div .fieldset ul li input {padding: 5px 15px;flex: 1;}
+#wrap .container .cont03 div .fieldset ul li input:focus::placeholder {opacity: 0;}
+#wrap .container .cont03 div .fieldset ul li:not(.radioLi) label {font-weight: bold;}
+#wrap .container .cont03 div .fieldset ul li .radio {flex: 1;display: flex;justify-content: space-around;align-items: center;}
+#wrap .container .cont03 div .fieldset ul li .radio span {flex: 0.5;}
+#wrap .container .cont03 div .fieldset ul li .radio>span {font-weight: bold;} 
+#wrap .container .cont03 div .fieldset ul li .radio div {flex: 1;display: flex;}
+#wrap .container .cont03 div .fieldset ul li .radio div label {cursor: pointer;text-align: left;}
+#wrap .container .cont03 div .fieldset ul li .radio div label input {display: inline-block;margin-right: 5px;}
+#wrap .container .cont03 div .fieldset .bottom {padding-top: 20px;}
+#wrap .container .cont03 div .fieldset .bottom>div {display: flex;justify-content: space-between;align-items: center;margin-bottom: 10px;}
+#wrap .container .cont03 div .fieldset .bottom>div img {width: 20px;height: 20px;margin-right: 20px;}
+#wrap .container .cont03 div .fieldset .bottom>div span {cursor: pointer;}
+#wrap .container .cont03 div .fieldset .bottom>div span.xi-check::before {margin-right: 10px;}
+#wrap .container .cont03 div .fieldset .bottom>div span.xi-check.active:before {color: #F93755;}
+#wrap .container .cont03 div .fieldset .bottom>button {
     width: 100%;
     background-color: #F93755;
     color: #fff;
@@ -91,6 +98,57 @@ img{vertical-align:top;font-size:0;border:0;}
     margin-top: 20px;
 }
 
+
+
+/*---------- modal style ----------*/
+.bgcolor {
+    background-color: rgba(0,0,0,0.7);
+    width:100%;
+    height:100%;
+    position: fixed;
+    left:0;
+    top:0;
+    z-index:9999;
+    display: none;
+    transition: 0.5s;
+}
+.popUp {
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    display: none;
+    z-index: 1000;
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+
+
+/* 모달창 공통 */
+.popUp>div.contentGr {position: relative;}
+.popUp>div.contentGr h3 {font-size: 20px;font-weight: bold;margin: 20px;}
+.popUp>div.contentGr h2.bdtop {border-top: 1px solid #999;padding: 20px 20px 0;}
+.popUp>div.contentGr>div.modalcont {overflow-y: scroll;height: 400px;width: 100%;text-align: left;}
+.popUp>div.contentGr>span.close {position: absolute;top: 5px;right: 20px;}
+.popUp>div.btnGr {margin-top: 40px;display: flex;height: 60px;}
+.popUp>div.btnGr button {color: #fff;background-color: #333;font-weight: bold;font-size: 18px;flex: 1;border: none;line-height: 60px;}
+.popUp>div.contentGr>div.modalcont {font-size:16px; line-height:26px;border-top: 1px solid #999;padding: 0 20px;box-sizing: border-box;}
+.popUp>div.contentGr>div.modalcont h2 {font-size:18px; line-height:26px; font-weight:600; letter-spacing:-1px; margin:20px 0 20px;}
+
+.popUp>div.contentGr>div.modalcont p {margin:10px 10px 10px 0;}
+.popUp>div.contentGr>div.modalcont table {width:100%; max-width:1200px; border:solid 1px #ccc;  border-right:none; margin-top:20px;table-layout: fixed;margin-bottom: 50px;}
+.popUp>div.contentGr>div.modalcont table:first-of-type {margin-top: 60px;}
+.popUp>div.contentGr>div.modalcont th {background-color:#eee; font-size:16px;  font-weight:600; padding:10px 0; border-right:solid 1px #ccc;}
+.popUp>div.contentGr>div.modalcont td {font-size:15px;  font-weight:500; padding:10px; border-right:solid 1px #ccc;word-break: break-all;text-align: center;}
+
+.popUp>div.contentGr>div.modalcont.secomc h2 {margin: 20px 10px 20px 0;}
+.popUp>div.contentGr>div.modalcont.secomc table:first-of-type {margin-top: 0;}
+
+
+
 /* section 04 */
 #wrap .container .cont04 {max-width: 800px;margin: 70px auto 0;}
 #wrap .container .cont04 p {font-size: 38px;letter-spacing: -0.05em;font-weight: bold;line-height: 80px;color: #333;}
@@ -98,6 +156,8 @@ img{vertical-align:top;font-size:0;border:0;}
 #wrap .container .cont04 ul li:nth-child(2n-1) {display: table;width: 200px;height: 200px;border-radius: 50%;background-color: #005876;color: #fff;text-align: center;padding: 20px;box-sizing: border-box;}
 #wrap .container .cont04 ul li:nth-child(2n-1) span {display: table-cell;vertical-align: middle;font-size: 32px;font-weight: bold;}
 #wrap .container .cont04 ul li:nth-child(2n) img {width: 80px;height: 80px;}
+
+
 
 
 
@@ -116,7 +176,7 @@ img{vertical-align:top;font-size:0;border:0;}
     #wrap .container .cont02 {margin-top: 100px;}
     #wrap .container .cont02 .cardImg div {padding: 30px;}
     #wrap .container .cont02 .cardImg div p {font-size: 16px;height: 60px;}
-    #wrap .container .cont03 form fieldset .bottom>button {font-size: 22px;}
+    #wrap .container .cont03 div .fieldset .bottom>button {font-size: 22px;}
     #wrap .container .cont04 p {font-size: 32px;}
     #wrap .container .cont04 ul li:nth-child(2n-1) span {font-size: 28px;}
 }
@@ -137,7 +197,7 @@ img{vertical-align:top;font-size:0;border:0;}
     #wrap .container .cont02 {margin-top: 100px;}
     #wrap .container .cont02 .cardImg div {padding: 20px 0 20px 0;}
     #wrap .container .cont02 .cardImg div p {font-size: 16px;height: 60px;}
-    #wrap .container .cont03 form fieldset .bottom>button {font-size: 22px;}
+    #wrap .container .cont03 div .fieldset .bottom>button {font-size: 22px;}
     #wrap .container .cont04 p {font-size: 28px;}
     #wrap .container .cont04 ul li:nth-child(2n-1) {width: 150px;height: 150px;}
     #wrap .container .cont04 ul li:nth-child(2n-1) span {font-size: 22px;}
@@ -145,10 +205,8 @@ img{vertical-align:top;font-size:0;border:0;}
 
 
 
-
-
 /* mobile */
-@media (min-width : 320px) and (max-width: 767.99px) {
+@media (max-width: 767.99px) {
     #wrap {padding: 0 20px;}
     #wrap header {height: 80px;line-height: 80px;}
     #wrap header nav {padding: 0 20px;box-sizing: border-box;}
@@ -156,8 +214,8 @@ img{vertical-align:top;font-size:0;border:0;}
     #wrap header nav .button button {padding: 8px;font-size: 13px;}
 
     #wrap .container {margin-top: 100px;}
-    #wrap .container .text {width: 80%;margin: 50px auto 30px;}
-    #wrap .container .text p {font-size: 25px;line-height: 40px;word-break: keep-all;}
+    #wrap .container .text {width: 100%;margin: 50px auto 30px;}
+    #wrap .container .text p {font-size: 22px;line-height: 40px;word-break: keep-all;}
     #wrap .container .text p:last-of-type {font-size: 22px;}
     #wrap .container .text span {display: none;}
     #wrap .container .cardImg {
@@ -174,26 +232,34 @@ img{vertical-align:top;font-size:0;border:0;}
     #wrap .container .cont02 .cardImg div p {font-size: 16px;height: 70px;width: auto;}
  
     #wrap .container .cont03 {margin-top: 80px;}
-    #wrap .container .cont03 form fieldset {padding: 0;}
-    #wrap .container .cont03 form fieldset ul {flex-direction: column;row-gap: 10px;}
-    #wrap .container .cont03 form fieldset .bottom>button {font-size: 18px;}
+    #wrap .container .cont03 div .fieldset {padding: 0;}
+    #wrap .container .cont03 div .fieldset ul {flex-direction: column;row-gap: 10px;}
+    #wrap .container .cont03 div .fieldset .bottom>button {font-size: 18px;}
     #wrap .container .cont03>img {max-width: 400px;width: 100%;}
-    #wrap .container .cont03 form fieldset {border: none;}
-    #wrap .container .cont03 form fieldset ul {align-items: start;}
-    #wrap .container .cont03 form fieldset ul li {align-items: start;flex-direction: column;width: 100%;}
-    #wrap .container .cont03 form fieldset ul li label {margin-bottom: 10px;}
-    #wrap .container .cont03 form fieldset ul li input {width: 100%;box-sizing: border-box;}
-    #wrap .container .cont03 form fieldset ul li.age::after,
-    #wrap .container .cont03 form fieldset ul li.money::after {bottom: 5px;}
-    #wrap .container .cont03 form fieldset ul:last-of-type {border: none;}
-    #wrap .container .cont03 form fieldset .bottom span {font-size: 14px;}
-    #wrap .container .cont03 form fieldset ul li .radio {width: 100%;}
-    #wrap .container .cont03 form fieldset ul li .radio span {text-align: left;}
-    #wrap .container .cont03 form fieldset ul li .radio div label {margin-bottom: 0;text-align: right;}
-    #wrap .container .cont03 form fieldset ul li .radio div input {width: auto;}
+    #wrap .container .cont03 div .fieldset {border: none;}
+    #wrap .container .cont03 div .fieldset ul {align-items: start;}
+    #wrap .container .cont03 div .fieldset ul li {align-items: start;flex-direction: column;width: 100%;}
+    #wrap .container .cont03 div .fieldset ul li label {margin-bottom: 10px;}
+    #wrap .container .cont03 div .fieldset ul li input {width: 100%;box-sizing: border-box;}
+    #wrap .container .cont03 div .fieldset ul li.age::after,
+    #wrap .container .cont03 div .fieldset ul li.money::after {bottom: 5px;}
+    #wrap .container .cont03 div .fieldset ul:last-of-type {border: none;}
+    #wrap .container .cont03 div .fieldset .bottom span {font-size: 14px;}
+    #wrap .container .cont03 div .fieldset ul li .radio {width: 100%;flex-direction: column;align-items: start;}
+    #wrap .container .cont03 div .fieldset ul li .radio span {text-align: left;}
+    #wrap .container .cont03 div .fieldset ul li .radio div label {margin-bottom: 0;text-align: left;}
+    #wrap .container .cont03 div .fieldset ul li .radio div label:nth-child(2) {margin-left: 20px;}
+    #wrap .container .cont03 div .fieldset ul li .radio div input {width: auto;}
 
     #wrap .container .cont04 p {font-size: 28px;}
     #wrap .container .cont04 ul li:nth-child(2n-1) span {font-size: 16px;}
+
+    .popUp>div.contentGr h3 {font-size: 18px;}
+    .popUp>div.contentGr>div.modalcont {font-size:14px; line-height:26px;padding-right: 20px;}
+    .popUp>div.contentGr>div.modalcont h2 {font-size:16px; line-height:26px; font-weight:600; letter-spacing:-1px; margin:20px 0 20px;}
+    .popUp>div.contentGr>div.modalcont p {margin:10px 10px 10px 0;}
+    .popUp>div.btnGr button {font-size: 16px;}
+
 }   
 
 @media (min-width : 650px) and (max-width: 767.99px) {
@@ -202,13 +268,11 @@ img{vertical-align:top;font-size:0;border:0;}
 }
 
 @media (min-width : 500px) and (max-width: 649.99px) {
-    /* .arr {transform: translateX(-5px);}
-    #wrap .container .cont04 ul li:last-child {margin-top: 20px;transform: translateX(-150px);} */
     #wrap .container .cont04 ul {flex-wrap:wrap;justify-content: center;align-items: center; overflow:auto;}
     #wrap .container .cont04 ul li:nth-child(2n-1) {width: 100px;height: 100px;}
 }
 
-@media (min-width : 320px) and (max-width: 499.99px) {
+@media (max-width: 499.99px) {
     #wrap .container .cont04 ul {flex-wrap:wrap;justify-content: center;align-items: center; overflow:auto;}
     #wrap .container .cont04 ul li:last-child {margin-top: 20px;}
     #wrap .container .cont04 ul li:nth-child(2n-1) {width:90px;height: 90px;}
@@ -216,7 +280,7 @@ img{vertical-align:top;font-size:0;border:0;}
 }
 
 
-@media (min-width : 450px) and (max-width: 659.99px) {
+@media (min-width : 450px) and (max-width: 676.99px) {
     #wrap .container .cont02 .cardImg div:last-child,
     #wrap .container .cont01 .cardImg img:last-child {grid-row: span 1; grid-column: span 2;width: 50%;}
 
